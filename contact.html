@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" >
+<title>City Taxi App - Contact</title>
+<link rel="icon" href="images/taxi-logo.ico">
+<link rel="stylesheet" href="css/touchTouch.css">
+<link rel="stylesheet" href="css/stuck.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/ihover.css">
+<link rel="stylesheet" href="css/component.css" />
+<link rel="stylesheet" href="css/form.css">
+<script src="js/modernizr.custom.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/jquery.dlmenu.js"></script>
+<script src="js/script.js"></script>
+<script src="js/superfish.js"></script>
+<script src="js/jquery.equalheights.js"></script>
+<script src="js/tmStickUp.js"></script>
+<script src="js/TMForm.js"></script>
+<script src="js/jquery.ui.totop.js"></script>
+<script src="js/touchTouch.jquery.js"></script>
+<script>
+$(function() {
+  $( '#dl-menu' ).dlmenu();
+});
+</script>
+<script>
+ $(document).ready(function(){
+  $().UItoTop({ easingType: 'easeOutQuart' });
+  $('#stuck_container').tmStickUp({});
+  $('.gallery .gall_item').touchTouch();  
+  });
+</script>
+</head>
+<body class="page1" id="top" style="">
+<!--==============================
+        header + Menu
+=================================-->
+<header>
+  <section id="stuck_container" class="" style="position: relative; top: 0px; z-index: 999; left: 0px; right: 0px; margin: 0px auto;">
+    <div class="container">
+      <div class="row">
+		 <div class="grid_11">
+         <a href="index.html"><img src="images/logo2.png" alt="Logo alt" class="img_inner fright"></a>
+					<div id="dl-menu" class="dl-menuwrapper">
+						<button class="dl-trigger">Open Menu</button>
+						<ul class="dl-menu">
+							<li>
+								<a href="index.html">Main</a>
+							</li>						
+							<li>
+								<a href="#">Your Dashboards</a>
+								<ul class="dl-submenu">
+									<li><a href="JSAPI.html?type=dashboard&city=NYC&report=dummy">New York</a></li>
+									<li><a href="JSAPI.html?type=dashboard&city=SFO&report=dummy">San Francisco</a></li>
+									<li><a href="JSAPI.html?type=dashboard&city=PAR&report=dummy">Paris</a></li>
+									<li><a href="JSAPI.html?type=dashboard&city=TOK&report=dummy">Tokyo</a></li>
+									<li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Your Reports</a>
+								<ul class="dl-submenu">
+									<li><a href="JSAPI.html?type=viewer_params&city=dummy&report=TripListNoPage.rptdesign">Trip summary</a></li>
+									<li><a href="JSAPI.html?type=viewer_params&city=dummy&report=CustomerSatisfaction.rptdesign">Customer satisfaction</a></li>
+									<li><a target="_blank" href="../../executereport.do?__executableName=/Applications/City%20Taxi/Report%20Designs/TripDetail.rptdesign">View an invoice</a></li>
+									<li>
+								</ul>								
+							</li>
+							<li>
+								<a href="#">About</a>
+								<ul class="dl-submenu">
+									<li><a href="company.html">The company</a></li>
+									<li><a href="cars.html">The cars</a></li>
+									<li>
+								</ul>								
+							</li>
+							<li>
+								<a href="contact.html">Contact</a>
+							</li>
+							<li>
+								<a href="../../ssologout.do"><img src="images/logout-24.png">&nbsp;Logout</a></li>
+							</li>
+						</ul>
+					</div>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><div class="pseudoStickyBlock" style="position: relative; display: block; height: 4px;"></div>
+</header>
+<!--=====================
+          Content
+======================-->
+<section class="content"><div class="ic">More Website Templates @ TemplateMonster.com - June 16, 2014!</div>
+  <div class="container">
+    <div class="row">
+      <div class="grid_12">
+        <h3 class="ta__center">Our Location</h3>
+        <div class="map">
+          <figure class="">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d24214.807650104907!2d-73.94846048422478!3d40.65521573400813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1395650655094" style="border:0"></iframe>
+          </figure>
+        </div>
+      </div>
+      <div class="grid_6">
+        <div class="text1 tx__1">Contact Form</div>
+          <form id="form" >
+            <div class="form_spinner">
+              <img src="images/Preloader_4.gif" alt="">
+            </div>
+            <div class="modal fade response-message">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Modal title</h4>
+                  </div>
+                  <div class="modal-body">
+                    asfasfasf
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="response-error-message"></div>
+                <label class="name">
+                  <input type="text" name="name" placeholder="Name:" value="" data-constraints="@Required @JustLetters" />
+                  <span class="empty-message">*This field is required.</span>
+                  <span class="error-message">*This is not a valid name.</span>
+                </label>
+                <label class="email">
+                  <input type="text" name="email" placeholder="E-mail:" value="" data-constraints="@Required @Email" />
+                  <span class="empty-message">*This field is required.</span>
+                  <span class="error-message">*This is not a valid email.</span>
+                </label>
+                <label class="phone">
+                  <input type="text" name="phone" placeholder="Phone:" value="" data-constraints="@Required @JustNumbers"/>
+                  <span class="empty-message">*This field is required.</span>
+                  <span class="error-message">*This is not a valid phone.</span>
+                </label>
+                <label class="message">
+                  <textarea name="message" placeholder="Message:" data-constraints='@Required @Length(min=20,max=999999)'></textarea>
+                  <span class="empty-message">*This field is required.</span>
+                  <span class="error-message">*The message is too short.</span>
+                </label>
+                <div class="clear"></div>
+                <div class="btns">
+                  <a href="#" data-type="reset" class="btn">clear</a>
+                  <a href="#" data-type="submit" class="btn">send</a>
+                </div>
+          </form>
+      </div>
+      <div class="grid_6">
+        <div class="text1 tx__1">Contact Information</div>
+        <p>We offer you 24/7 support for all of our customers</p>
+        <p>If you need information, don't hesitate to contact us.</p>
+        <p>Ametconsecteturertolom  werto monikosit amet ultricies erateroli me rutruma auctorerttu terolp sadertto mertoInteger convallis orcidet wertolo monolaoreetatwertlim wernom vertIpsum dolor sit amsecteturertolom  lid ber asrot gertoli moniko.</p>
+        The Company Name Inc. <br>
+        9870 St Vincent Place, <br>
+        Glasgow, DC 45 Fr 45. <br>
+        Telephone: +1 800 603 6035 <br>
+        FAX: +1 800 889 9898 <br>
+        E-mail: <a href="#">mail@demolink.org</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!--==============================
+              footer
+=================================-->
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="grid_12">
+        <div class="socials">
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-google-plus"></a>
+          <a href="#" class="fa fa-youtube-play"></a>
+        </div>
+        <div class="copyright"><span class="brand">Web Design</span> &copy; <span id="copyright-year"></span> | <a href="#">Privacy Policy</a> <div>Website designed by <a href="http://www.templatemonster.com/" rel="nofollow">TemplateMonster.com</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
