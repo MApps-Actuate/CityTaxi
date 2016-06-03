@@ -33,6 +33,7 @@
     <label>
      <caption value="">
       <font bold="false" italic="false" underline="false"/>
+      <color _body=",255,0,0,0"/>
      </caption>
      <background _nil="1"/>
      <outline>
@@ -70,6 +71,7 @@
      </outline>
     </title>
    </children>
+   <bounds _body=",,,219.75"/>
    <outline>
     <color _nil="1"/>
    </outline>
@@ -80,6 +82,7 @@
   <extendedProperties name="keep.hierarchy.category" value="false"/>
   <extendedProperties name="keep.hierarchy.series" value="false"/>
   <extendedProperties name="jschart.series.shadow" value="false"/>
+  <extendedProperties name="enable.data.summarize" value="false"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="&#039;A&#039;,&#039;B&#039;,&#039;C&#039;,&#039;D&#039;,&#039;E&#039;"/>
    <orthogonalSampleData dataSetRepresentation="6,4,12,8,10" seriesDefinitionIndex="0"/>
@@ -101,6 +104,7 @@
      <label>
       <caption>
        <font bold="false" italic="false" underline="false"/>
+       <color _body=",255,0,0,0"/>
       </caption>
       <background _nil="1"/>
       <outline>
@@ -152,21 +156,23 @@
                     <property name="type">slicer</property>
                 </structure>
             </list-property>
-            <property name="height">198.75pt</property>
+            <property name="height">219.75pt</property>
             <property name="width">223.5pt</property>
             <list-property name="boundDataColumns">
                 <structure>
                     <property name="name">CarType</property>
+                    <text-property name="displayName">CarType</text-property>
                     <expression name="expression">dataSetRow["CarType"]</expression>
                     <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="name">TransactionID</property>
+                    <text-property name="displayName">TransactionID</text-property>
                     <expression name="expression">dataSetRow["TransactionID"]</expression>
                     <property name="dataType">string</property>
                 </structure>
             </list-property>
-            <property name="theme">ThemesReportItems3.City Taxi</property>
+            <property name="theme">ThemesReportItems3.Modern</property>
             <property name="linkedDataModel">NewDataMartDataSource::Data Model</property>
             <list-property name="userProperties">
                 <structure>
@@ -187,6 +193,7 @@
     <label>
      <caption value="">
       <font bold="false" italic="false" underline="false"/>
+      <color _body=",255,0,0,0"/>
      </caption>
      <background _nil="1"/>
      <outline>
@@ -223,6 +230,7 @@
      </outline>
     </title>
    </children>
+   <bounds _body=",,,221.25"/>
    <outline>
     <color _nil="1"/>
    </outline>
@@ -238,6 +246,7 @@
   <extendedProperties name="jschart.navigator" value="false"/>
   <extendedProperties name="jschart.scroll" value="true"/>
   <extendedProperties name="jschart.series.shadow" value="false"/>
+  <extendedProperties name="enable.data.summarize" value="false"/>
   <sampleData>
    <baseSampleData dataSetRepresentation="5"/>
    <orthogonalSampleData dataSetRepresentation="2.3" seriesDefinitionIndex="0"/>
@@ -254,6 +263,7 @@
    <title visible="false">
     <caption value="">
      <font bold="false" italic="false" underline="false"/>
+     <color _body=",255,0,0,0"/>
     </caption>
     <background _nil="1"/>
     <outline>
@@ -264,6 +274,7 @@
     <title visible="false">
      <caption value="">
       <font bold="false" italic="false" underline="false"/>
+      <color _body=",255,0,0,0"/>
      </caption>
      <background _nil="1"/>
      <outline>
@@ -296,6 +307,7 @@
     <label visible="true">
      <caption>
       <font bold="false" italic="false" underline="false" rotation="0.0"/>
+      <color _body=",255,0,0,0"/>
      </caption>
      <background _nil="1"/>
      <outline>
@@ -344,6 +356,7 @@
    <label visible="true">
     <caption>
      <font bold="false" italic="false" underline="false" rotation="0.0"/>
+     <color _body=",255,0,0,0"/>
     </caption>
     <background _nil="1"/>
     <outline>
@@ -389,8 +402,8 @@
                     <property name="type">slicer</property>
                 </structure>
             </list-property>
-            <property name="height">201pt</property>
-            <property name="width">247.5pt</property>
+            <property name="height">221.25pt</property>
+            <property name="width">278.25pt</property>
             <list-property name="boundDataColumns">
                 <structure>
                     <property name="name">TripDate/Month</property>
@@ -404,7 +417,7 @@
                     <property name="dataType">float</property>
                 </structure>
             </list-property>
-            <property name="theme">ThemesReportItems3.City Taxi</property>
+            <property name="theme">ThemesReportItems3.Modern</property>
             <property name="linkedDataModel">NewDataMartDataSource::Data Model</property>
             <list-property name="userProperties">
                 <structure>
@@ -425,6 +438,7 @@
     <label>
      <caption value="">
       <font bold="false" italic="false" underline="false"/>
+      <color _body=",255,0,0,0"/>
      </caption>
      <background _nil="1"/>
      <outline>
@@ -461,6 +475,7 @@
      </outline>
     </title>
    </children>
+   <bounds _body=",,,220.5"/>
    <outline>
     <color _nil="1"/>
    </outline>
@@ -470,7 +485,7 @@
   <extendedProperties name="enable.drill.series" value="true"/>
   <extendedProperties name="jschart.range.selector" value="false"/>
   <extendedProperties name="jschart.navigator" value="true"/>
-  <extendedProperties name="jschart.scroll" value="true"/>
+  <extendedProperties name="jschart.scroll" value="false"/>
   <extendedProperties name="keep.hierarchy.category" value="false"/>
   <extendedProperties name="keep.hierarchy.series" value="false"/>
   <extendedProperties name="enable.data.summarize" value="false"/>
@@ -491,6 +506,7 @@
    <title visible="false">
     <caption value="">
      <font bold="false" italic="false" underline="false"/>
+     <color _body=",255,0,0,0"/>
     </caption>
     <background _nil="1"/>
     <outline>
@@ -501,6 +517,7 @@
     <title visible="false">
      <caption value="">
       <font bold="false" italic="false" underline="false"/>
+      <color _body=",255,0,0,0"/>
      </caption>
      <background _nil="1"/>
      <outline>
@@ -540,6 +557,7 @@
     <label visible="true">
      <caption>
       <font bold="false" italic="false" underline="false" rotation="0.0"/>
+      <color _body=",255,0,0,0"/>
      </caption>
      <background _nil="1"/>
      <outline>
@@ -588,6 +606,7 @@
    <label visible="false">
     <caption>
      <font bold="false" italic="false" underline="false" rotation="0.0"/>
+     <color _body=",255,0,0,0"/>
     </caption>
     <background _nil="1"/>
     <outline>
@@ -632,7 +651,7 @@
                     <property name="type">slicer</property>
                 </structure>
             </list-property>
-            <property name="height">201pt</property>
+            <property name="height">220.5pt</property>
             <property name="width">354.75pt</property>
             <list-property name="boundDataColumns">
                 <structure>
@@ -654,7 +673,7 @@
                     <property name="dataType">string</property>
                 </structure>
             </list-property>
-            <property name="theme">ThemesReportItems3.City Taxi</property>
+            <property name="theme">ThemesReportItems3.Modern</property>
             <property name="linkedDataModel">NewDataMartDataSource::Data Model</property>
             <list-property name="userProperties">
                 <structure>
@@ -676,8 +695,8 @@
                         <gadget name="Gadget_1488339d-8232-4c24-afc1-a98cf6fde009" id="9">
                             <property name="x">0px</property>
                             <property name="y">0px</property>
-                            <property name="height">421px</property>
-                            <property name="width">707px</property>
+                            <property name="height">452px</property>
+                            <property name="width">691px</property>
                             <property name="title">Live display of SAN FRANCISCO riders - Refresh rate 1 minute</property>
                             <property name="externalGadgetURI">^/Report Designs/Monitoring.rptdesign</property>
                             <property name="showTitle">false</property>
@@ -688,8 +707,8 @@
                                 <property name="measure">1</property>
                                 <property name="unit">minute</property>
                             </structure>
-                            <property name="height">421px</property>
-                            <property name="width">707px</property>
+                            <property name="height">452px</property>
+                            <property name="width">691px</property>
                             <property name="caption">
                                 <gadget-caption id="10">
                                     <property name="showCaption">true</property>
@@ -714,12 +733,13 @@
                                     <property name="gadgetType">viewer</property>
                                     <property name="externalContentRef">
                                         <external-element-ref>
-                                            <property name="sourceFile">/Applications/City Taxi/Report Designs/Monitoring.rptdesign</property>
+                                            <property name="sourceFile">^/Report Designs/Monitoring.rptdesign</property>
                                         </external-element-ref>
                                     </property>
                                     <property name="paramSettings">
                                         <param-setting>
                                             <property name="paramName">pCity</property>
+                                            <property name="displayText">San Francisco</property>
                                             <expression name="value">San Francisco</expression>
                                             <property name="isHidden">true</property>
                                             <expression name="defaultValue" type="javascript">San Francisco</expression>
@@ -752,9 +772,9 @@
                             </property>
                         </gadget>
                         <gadget name="Gadget_62a35de9-170b-447f-a96f-5d71e73cc085" id="610">
-                            <property name="x">720px</property>
+                            <property name="x">702px</property>
                             <property name="y">0px</property>
-                            <property name="height">426px</property>
+                            <property name="height">446px</property>
                             <property name="width">515px</property>
                             <property name="title">Ecological FootPrint</property>
                             <property name="externalGadgetURI">/Applications/City Taxi/Report Designs/EcoFootprint.rptdesign</property>
@@ -766,7 +786,7 @@
                                 <property name="measure">1</property>
                                 <property name="unit">minute</property>
                             </structure>
-                            <property name="height">426px</property>
+                            <property name="height">446px</property>
                             <property name="width">515px</property>
                             <property name="caption">
                                 <gadget-caption id="611">
@@ -792,13 +812,14 @@
                                     <property name="gadgetType">viewer</property>
                                     <property name="externalContentRef">
                                         <external-element-ref>
-                                            <property name="sourceFile">/Applications/City Taxi/Report Designs/EcoFootprint.rptdesign</property>
+                                            <property name="sourceFile">^/Report Designs/EcoFootprint.rptdesign</property>
                                             <property name="targetBookmark">Eco Footprint</property>
                                         </external-element-ref>
                                     </property>
                                     <property name="paramSettings">
                                         <param-setting>
                                             <property name="paramName">pCity</property>
+                                            <property name="displayText">San Francisco</property>
                                             <expression name="value">San Francisco</expression>
                                             <property name="isHidden">true</property>
                                             <expression name="defaultValue" type="javascript">San Francisco</expression>
@@ -878,14 +899,14 @@
                         <gadget name="Gadget_97305158-c3c1-4a9f-8d0a-e948d4a7100a" id="582">
                             <property name="x">18px</property>
                             <property name="y">90px</property>
-                            <property name="height">300px</property>
+                            <property name="height">329px</property>
                             <property name="width">490px</property>
                             <property name="title">Daily ridership distribution</property>
                             <property name="showTitle">true</property>
                             <property name="showBorder">false</property>
                             <property name="zIndex">5</property>
                             <property name="showScrollBar">false</property>
-                            <property name="height">300px</property>
+                            <property name="height">329px</property>
                             <property name="width">490px</property>
                             <property name="caption">
                                 <gadget-caption id="583">
@@ -971,17 +992,17 @@
                             </property>
                         </gadget>
                         <gadget name="Gadget_65662b2c-3423-4ddd-a236-57ccf7c01e48" id="578">
-                            <property name="x">540px</property>
+                            <property name="x">519px</property>
                             <property name="y">90px</property>
-                            <property name="height">300px</property>
-                            <property name="width">346px</property>
+                            <property name="height">330px</property>
+                            <property name="width">388px</property>
                             <property name="title">Cost trend - monthly</property>
                             <property name="showTitle">true</property>
                             <property name="showBorder">false</property>
                             <property name="zIndex">4</property>
                             <property name="showScrollBar">false</property>
-                            <property name="height">300px</property>
-                            <property name="width">346px</property>
+                            <property name="height">330px</property>
+                            <property name="width">388px</property>
                             <property name="caption">
                                 <gadget-caption id="579">
                                     <property name="showCaption">true</property>
@@ -1007,6 +1028,9 @@
                                         <event-object>
                                             <property name="gadget">Gadget_97305158-c3c1-4a9f-8d0a-e948d4a7100a</property>
                                         </event-object>
+                                        <event-object>
+                                            <property name="gadget">Gadget_f665b54f-3b31-44f2-9751-5e9dc7a1cde4</property>
+                                        </event-object>
                                     </property>
                                 </event-subscriber>
                             </property>
@@ -1021,6 +1045,9 @@
                                         <event-object>
                                             <property name="gadget">Gadget_97305158-c3c1-4a9f-8d0a-e948d4a7100a</property>
                                         </event-object>
+                                        <event-object>
+                                            <property name="gadget">Gadget_f665b54f-3b31-44f2-9751-5e9dc7a1cde4</property>
+                                        </event-object>
                                     </property>
                                 </event-subscriber>
                             </property>
@@ -1028,14 +1055,14 @@
                         <gadget name="Gadget_f665b54f-3b31-44f2-9751-5e9dc7a1cde4" id="574">
                             <property name="x">918px</property>
                             <property name="y">90px</property>
-                            <property name="height">300px</property>
+                            <property name="height">328px</property>
                             <property name="width">346px</property>
                             <property name="title">Rides by vehicle type</property>
                             <property name="showTitle">true</property>
                             <property name="showBorder">false</property>
                             <property name="zIndex">3</property>
                             <property name="showScrollBar">false</property>
-                            <property name="height">300px</property>
+                            <property name="height">328px</property>
                             <property name="width">346px</property>
                             <property name="caption">
                                 <gadget-caption id="575">
@@ -1062,6 +1089,9 @@
                                         <event-object>
                                             <property name="gadget">Gadget_97305158-c3c1-4a9f-8d0a-e948d4a7100a</property>
                                         </event-object>
+                                        <event-object>
+                                            <property name="gadget">Gadget_65662b2c-3423-4ddd-a236-57ccf7c01e48</property>
+                                        </event-object>
                                     </property>
                                 </event-subscriber>
                             </property>
@@ -1075,6 +1105,9 @@
                                         </event-object>
                                         <event-object>
                                             <property name="gadget">Gadget_97305158-c3c1-4a9f-8d0a-e948d4a7100a</property>
+                                        </event-object>
+                                        <event-object>
+                                            <property name="gadget">Gadget_65662b2c-3423-4ddd-a236-57ccf7c01e48</property>
                                         </event-object>
                                     </property>
                                 </event-subscriber>

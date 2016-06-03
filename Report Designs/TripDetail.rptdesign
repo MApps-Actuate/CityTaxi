@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201601291629 Build &lt;@BUILD@></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201603260016</property>
     <property name="units">in</property>
     <property name="theme">F-Type App.defaultTheme</property>
     <property name="iconFile">/templates/blank_report.gif</property>
@@ -596,13 +596,16 @@
                 <ref-entry baseId="18" id="18"/>
                 <ref-entry baseId="19" id="19"/>
                 <ref-entry baseId="20" id="20"/>
-                <ref-entry baseId="21" id="21"/>
+                <ref-entry baseId="21" id="21">
+                    <property name="backgroundColor">#DDDDDD</property>
+                </ref-entry>
                 <ref-entry baseId="22" id="22"/>
             </overridden-values>
         </simple-master-page>
     </page-setup>
     <body>
         <table id="153">
+            <property name="fontFamily">"Lato"</property>
             <property name="dataSet">Data Set</property>
             <list-property name="boundDataColumns">
                 <structure>
@@ -816,12 +819,14 @@ else&#13;
                                             <cell id="175">
                                                 <data id="183">
                                                     <property name="style">LargeDataItem</property>
+                                                    <property name="fontFamily">"Lato"</property>
                                                     <property name="resultSetColumn">City</property>
                                                 </data>
                                             </cell>
                                             <cell id="176">
                                                 <data id="184">
                                                     <property name="style">LargeDataItem</property>
+                                                    <property name="fontFamily">"Lato"</property>
                                                     <property name="resultSetColumn">CustomerName</property>
                                                 </data>
                                             </cell>
@@ -830,12 +835,14 @@ else&#13;
                                             <cell id="178">
                                                 <data id="185">
                                                     <property name="style">MediumDataItem</property>
+                                                    <property name="fontFamily">"Lato"</property>
                                                     <property name="resultSetColumn">TransactionID</property>
                                                 </data>
                                             </cell>
                                             <cell id="179">
                                                 <data id="186">
                                                     <property name="style">MediumDataItem</property>
+                                                    <property name="fontFamily">"Lato"</property>
                                                     <property name="resultSetColumn">TripDate</property>
                                                 </data>
                                             </cell>
@@ -847,6 +854,8 @@ else&#13;
                                                 <property name="paddingTop">12pt</property>
                                                 <label id="407">
                                                     <property name="style">MediumLabel</property>
+                                                    <property name="fontFamily">"Lato"</property>
+                                                    <property name="color">#99BADD</property>
                                                     <text-property name="text">Vehicle information</text-property>
                                                 </label>
                                             </cell>
@@ -863,6 +872,8 @@ else&#13;
                                                             <property name="verticalAlign">bottom</property>
                                                             <text-data id="386">
                                                                 <property name="style">SmallLabel</property>
+                                                                <property name="fontFamily">"Lato"</property>
+                                                                <property name="color">#99BADD</property>
                                                                 <expression name="valueExpr">"Your " + row["VehicleType"] + " driver"</expression>
                                                                 <property name="contentType">html</property>
                                                             </text-data>
@@ -885,6 +896,7 @@ else&#13;
                                                             <property name="verticalAlign">top</property>
                                                             <data id="193">
                                                                 <property name="style">SmallDataItem</property>
+                                                                <property name="fontFamily">"Lato"</property>
                                                                 <property name="resultSetColumn">DriverName</property>
                                                             </data>
                                                         </cell>
@@ -901,6 +913,8 @@ else&#13;
                                                             <property name="verticalAlign">bottom</property>
                                                             <label id="402">
                                                                 <property name="style">SmallLabel</property>
+                                                                <property name="fontFamily">"Lato"</property>
+                                                                <property name="color">#99BADD</property>
                                                                 <text-property name="text">Your vehicle</text-property>
                                                             </label>
                                                         </cell>
@@ -922,6 +936,7 @@ else&#13;
                                                             <property name="verticalAlign">top</property>
                                                             <data id="401">
                                                                 <property name="style">SmallDataItem</property>
+                                                                <property name="fontFamily">"Lato"</property>
                                                                 <property name="resultSetColumn">VehicleMake</property>
                                                             </data>
                                                         </cell>
@@ -943,6 +958,8 @@ else&#13;
                                                 <property name="rowSpan">1</property>
                                                 <label id="295">
                                                     <property name="style">MediumLabel</property>
+                                                    <property name="fontFamily">"Lato"</property>
+                                                    <property name="color">#99BADD</property>
                                                     <text-property name="text">Trip information</text-property>
                                                 </label>
                                             </cell>
@@ -976,13 +993,17 @@ else&#13;
                                                                     <cell id="219">
                                                                         <label id="296">
                                                                             <property name="style">SmallLabel</property>
+                                                                            <property name="fontFamily">"Lato"</property>
+                                                                            <property name="color">#99BADD</property>
                                                                             <text-property name="text">Time start :</text-property>
                                                                         </label>
                                                                     </cell>
                                                                     <cell id="220">
                                                                         <property name="style">DataItemBG</property>
+                                                                        <property name="backgroundColor">#CCDCEE</property>
                                                                         <data id="221">
                                                                             <property name="style">SmallDataItem</property>
+                                                                            <property name="fontFamily">"Lato"</property>
                                                                             <structure name="dateTimeFormat">
                                                                                 <property name="category">Short Time</property>
                                                                                 <property name="pattern">Short Time</property>
@@ -1004,13 +1025,17 @@ else&#13;
                                                                     <cell id="226">
                                                                         <label id="297">
                                                                             <property name="style">SmallLabel</property>
+                                                                            <property name="fontFamily">"Lato"</property>
+                                                                            <property name="color">#99BADD</property>
                                                                             <text-property name="text">Time end :</text-property>
                                                                         </label>
                                                                     </cell>
                                                                     <cell id="227">
                                                                         <property name="style">DataItemBG</property>
+                                                                        <property name="backgroundColor">#CCDCEE</property>
                                                                         <data id="228">
                                                                             <property name="style">SmallDataItem</property>
+                                                                            <property name="fontFamily">"Lato"</property>
                                                                             <structure name="dateTimeFormat">
                                                                                 <property name="category">Short Time</property>
                                                                                 <property name="pattern">Short Time</property>
@@ -1035,13 +1060,17 @@ else&#13;
                                                                     <cell id="315">
                                                                         <label id="316">
                                                                             <property name="style">SmallLabel</property>
+                                                                            <property name="fontFamily">"Lato"</property>
+                                                                            <property name="color">#99BADD</property>
                                                                             <text-property name="text">Duration :</text-property>
                                                                         </label>
                                                                     </cell>
                                                                     <cell id="317">
                                                                         <property name="style">DataItemBG</property>
+                                                                        <property name="backgroundColor">#CCDCEE</property>
                                                                         <data id="318">
                                                                             <property name="style">SmallDataItem</property>
+                                                                            <property name="fontFamily">"Lato"</property>
                                                                             <structure name="dateTimeFormat">
                                                                                 <property name="category">Short Time</property>
                                                                                 <property name="pattern">Short Time</property>
@@ -1089,13 +1118,17 @@ else&#13;
                                                                     <cell id="348">
                                                                         <label id="349">
                                                                             <property name="style">SmallLabel</property>
+                                                                            <property name="fontFamily">"Lato"</property>
+                                                                            <property name="color">#99BADD</property>
                                                                             <text-property name="text">GPS start :</text-property>
                                                                         </label>
                                                                     </cell>
                                                                     <cell id="350">
                                                                         <property name="style">DataItemBG</property>
+                                                                        <property name="backgroundColor">#CCDCEE</property>
                                                                         <data id="351">
                                                                             <property name="style">SmallDataItem</property>
+                                                                            <property name="fontFamily">"Lato"</property>
                                                                             <structure name="dateTimeFormat">
                                                                                 <property name="category">Short Time</property>
                                                                                 <property name="pattern">Short Time</property>
@@ -1117,13 +1150,17 @@ else&#13;
                                                                     <cell id="357">
                                                                         <label id="358">
                                                                             <property name="style">SmallLabel</property>
+                                                                            <property name="fontFamily">"Lato"</property>
+                                                                            <property name="color">#99BADD</property>
                                                                             <text-property name="text">GPS end :</text-property>
                                                                         </label>
                                                                     </cell>
                                                                     <cell id="359">
                                                                         <property name="style">DataItemBG</property>
+                                                                        <property name="backgroundColor">#CCDCEE</property>
                                                                         <data id="360">
                                                                             <property name="style">SmallDataItem</property>
+                                                                            <property name="fontFamily">"Lato"</property>
                                                                             <structure name="dateTimeFormat">
                                                                                 <property name="category">Short Time</property>
                                                                                 <property name="pattern">Short Time</property>
@@ -1148,13 +1185,17 @@ else&#13;
                                                                     <cell id="366">
                                                                         <label id="367">
                                                                             <property name="style">SmallLabel</property>
+                                                                            <property name="fontFamily">"Lato"</property>
+                                                                            <property name="color">#99BADD</property>
                                                                             <text-property name="text">Distance :</text-property>
                                                                         </label>
                                                                     </cell>
                                                                     <cell id="368">
                                                                         <property name="style">DataItemBG</property>
+                                                                        <property name="backgroundColor">#CCDCEE</property>
                                                                         <data id="369">
                                                                             <property name="style">SmallDataItem</property>
+                                                                            <property name="fontFamily">"Lato"</property>
                                                                             <structure name="dateTimeFormat">
                                                                                 <property name="category">Short Time</property>
                                                                                 <property name="pattern">Short Time</property>
@@ -1179,6 +1220,8 @@ else&#13;
                                                 <property name="paddingRight">12pt</property>
                                                 <label id="370">
                                                     <property name="style">MediumLabel</property>
+                                                    <property name="fontFamily">"Lato"</property>
+                                                    <property name="color">#99BADD</property>
                                                     <text-property name="text">Fare calculation</text-property>
                                                 </label>
                                             </cell>
@@ -1186,6 +1229,8 @@ else&#13;
                                                 <property name="paddingTop">12pt</property>
                                                 <label id="403">
                                                     <property name="style">MediumLabel</property>
+                                                    <property name="fontFamily">"Lato"</property>
+                                                    <property name="color">#99BADD</property>
                                                     <text-property name="text">Best available route</text-property>
                                                 </label>
                                             </cell>
@@ -1195,6 +1240,7 @@ else&#13;
                                                 <property name="paddingTop">36pt</property>
                                                 <property name="paddingLeft">1pt</property>
                                                 <grid id="258">
+                                                    <property name="fontFamily">"Lato"</property>
                                                     <property name="width">2.5104166666666665in</property>
                                                     <column id="259">
                                                         <property name="textAlign">right</property>
@@ -1208,13 +1254,17 @@ else&#13;
                                                         <cell id="262">
                                                             <data id="372">
                                                                 <property name="style">SmallLabel</property>
+                                                                <property name="fontFamily">"Lato"</property>
+                                                                <property name="color">#99BADD</property>
                                                                 <property name="resultSetColumn">BaseFareLabel</property>
                                                             </data>
                                                         </cell>
                                                         <cell id="263">
                                                             <property name="style">DataItemBG</property>
+                                                            <property name="backgroundColor">#CCDCEE</property>
                                                             <data id="271">
                                                                 <property name="style">SmallDataItem</property>
+                                                                <property name="fontFamily">"Lato"</property>
                                                                 <structure name="numberFormat">
                                                                     <property name="category">Fixed</property>
                                                                     <property name="pattern">###0.00{RoundingMode=HALF_UP}</property>
@@ -1227,13 +1277,17 @@ else&#13;
                                                         <cell id="265">
                                                             <label id="371">
                                                                 <property name="style">SmallLabel</property>
+                                                                <property name="fontFamily">"Lato"</property>
+                                                                <property name="color">#99BADD</property>
                                                                 <text-property name="text">Extras :</text-property>
                                                             </label>
                                                         </cell>
                                                         <cell id="266">
                                                             <property name="style">DataItemBG</property>
+                                                            <property name="backgroundColor">#CCDCEE</property>
                                                             <data id="270">
                                                                 <property name="style">SmallDataItem</property>
+                                                                <property name="fontFamily">"Lato"</property>
                                                                 <structure name="numberFormat">
                                                                     <property name="category">Fixed</property>
                                                                     <property name="pattern">###0.00{RoundingMode=HALF_UP}</property>
@@ -1246,13 +1300,17 @@ else&#13;
                                                         <cell id="268">
                                                             <label id="373">
                                                                 <property name="style">MediumLabel</property>
+                                                                <property name="fontFamily">"Lato"</property>
+                                                                <property name="color">#99BADD</property>
                                                                 <text-property name="text">Total :</text-property>
                                                             </label>
                                                         </cell>
                                                         <cell id="269">
                                                             <property name="style">DataItemBG</property>
+                                                            <property name="backgroundColor">#CCDCEE</property>
                                                             <data id="272">
                                                                 <property name="style">MediumDataItem</property>
+                                                                <property name="fontFamily">"Lato"</property>
                                                                 <property name="borderTopColor">#5C5C5C</property>
                                                                 <property name="borderTopStyle">solid</property>
                                                                 <property name="borderTopWidth">1px</property>
@@ -1468,6 +1526,8 @@ if (window.mapApiLoaded) {
                                                 <property name="paddingRight">12pt</property>
                                                 <label id="387">
                                                     <property name="style">MediumLabel</property>
+                                                    <property name="fontFamily">"Lato"</property>
+                                                    <property name="color">#99BADD</property>
                                                     <text-property name="text">Your rating</text-property>
                                                 </label>
                                             </cell>
@@ -1475,6 +1535,8 @@ if (window.mapApiLoaded) {
                                                 <property name="paddingTop">12pt</property>
                                                 <label id="388">
                                                     <property name="style">MediumLabel</property>
+                                                    <property name="fontFamily">"Lato"</property>
+                                                    <property name="color">#99BADD</property>
                                                     <text-property name="text">Your appreciation</text-property>
                                                 </label>
                                             </cell>
@@ -1493,6 +1555,7 @@ if (window.mapApiLoaded) {
                                             <cell id="281">
                                                 <data id="282">
                                                     <property name="style">SmallDataItem</property>
+                                                    <property name="fontFamily">"Lato"</property>
                                                     <property name="resultSetColumn">Comment</property>
                                                 </data>
                                             </cell>
