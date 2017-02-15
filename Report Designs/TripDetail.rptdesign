@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201603260016</property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201603302314</property>
     <property name="units">in</property>
     <property name="theme">F-Type App.defaultTheme</property>
     <property name="iconFile">/templates/blank_report.gif</property>
@@ -885,7 +885,7 @@ else&#13;
                                                             <property name="verticalAlign">middle</property>
                                                             <image id="385">
                                                                 <property name="source">file</property>
-                                                                <expression name="uri" type="javascript">"Images/Icons/" + row["CarType"] + ".png"</expression>
+                                                                <expression name="uri" type="javascript">"Images/Icons/" + row["CarType"] + "REFLECT.png"</expression>
                                                             </image>
                                                         </cell>
                                                     </row>
@@ -1337,7 +1337,7 @@ else&#13;
 var config = {
 	/*
 	 * The Google map key. You should provide your own key to use the Google Map
-	 * JSAPI.
+	 * JSAPI.  "AIzaSyDzX_T8DLWjYpJrzok5nmpgnNjeLPwUV2E"
 	 */
 	googleMapKey : "",
 
