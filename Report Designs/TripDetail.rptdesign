@@ -1337,7 +1337,7 @@ else&#13;
 var config = {
 	/*
 	 * The Google map key. You should provide your own key to use the Google Map
-	 * JSAPI.  "AIzaSyDzX_T8DLWjYpJrzok5nmpgnNjeLPwUV2E"
+	 * JSAPI. Old key: AIzaSyDzX_T8DLWjYpJrzok5nmpgnNjeLPwUV2E
 	 */
 	googleMapKey : "",
 

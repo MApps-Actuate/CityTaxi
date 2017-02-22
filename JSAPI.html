@@ -95,7 +95,7 @@ div.actuateParameterContainer .paramDisplayName {
 								<ul class="dl-submenu">
 									<li><a href="JSAPI.html?type=viewer_params&city=dummy&report=TripListNoPage.rptdesign">Trip summary</a></li>
 									<li><a href="JSAPI.html?type=viewer_params&city=dummy&report=CustomerSatisfaction.rptdesign">Customer satisfaction</a></li>
-									<li><a target="_blank" href="../../executereport.do?__executableName=/Applications/City%20Taxi/Report%20Designs/TripDetail.rptdesign">View an invoice</a></li>
+									<li><a target="_blank" href="../../executereport.do?__executableName=/Applications/CityTaxi/Report%20Designs/TripDetail.rptdesign">View an invoice</a></li>
 									<li>
 								</ul>								
 							</li>
@@ -235,7 +235,7 @@ function initViewerWithParams(paramValues){
 	viewer.setParameterValues(paramValues);
 	viewer.setUIOptions( options );
 	viewer.setWidth(1000);
-	viewer.setHeight(700);
+	viewer.setHeight(1303); // was 700
 	viewer.submit();
 }
 
