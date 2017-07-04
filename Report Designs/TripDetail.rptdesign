@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201603302314</property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201610042049</property>
     <property name="units">in</property>
     <property name="theme">F-Type App.defaultTheme</property>
     <property name="iconFile">/templates/blank_report.gif</property>
@@ -1574,5 +1574,9 @@ if (window.mapApiLoaded) {
                 </row>
             </footer>
         </table>
+        <text id="433">
+            <property name="contentType">html</property>
+            <text-property name="content"><![CDATA[<script type="text/javascript">(function() {var walkme = document.createElement('script'); walkme.type = 'text/javascript'; walkme.async = true; walkme.src = 'http://cdn.walkme.com/users/c3a6e9dcce4d42798d27207362f992fa/walkme_c3a6e9dcce4d42798d27207362f992fa.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(walkme, s); window._walkmeConfig = {smartLoad:true}; })();</script>]]></text-property>
+        </text>
     </body>
 </report>
