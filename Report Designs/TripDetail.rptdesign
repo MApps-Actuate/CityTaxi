@@ -1339,7 +1339,7 @@ var config = {
 	 * The Google map key. You should provide your own key to use the Google Map
 	 * JSAPI. Old key: AIzaSyDzX_T8DLWjYpJrzok5nmpgnNjeLPwUV2E
 	 */
-	googleMapKey : "",
+	googleMapKey : "AIzaSyDzX_T8DLWjYpJrzok5nmpgnNjeLPwUV2E",
 
 	/*
 	 * Provide the column binding names as shown below. If not all
