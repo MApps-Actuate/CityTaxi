@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201603302314</property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.7.0.v201710020040</property>
     <property name="units">in</property>
     <property name="iconFile">/templates/blank_report.gif</property>
     <property name="bidiLayoutOrientation">ltr</property>
@@ -86,7 +86,8 @@ BirtStr.right("0" + BirtMath.mod(row["elapsedTime"],60) , 2)</expression>
                     <expression name="expression" type="javascript">"&lt;div align='left'>" +&#13;
 "&lt;table style='width:100%'> " +&#13;
 "&lt;tr>" +&#13;
-"&lt;td colspan = '5' >&lt;b>Customer : " + row["CustomerName"] + "&lt;/b>&lt;/td>" +&#13;
+"&lt;td colspan = '3' >&lt;b>Customer : " + row["CustomerName"] + "&lt;/b>&lt;/td>" +&#13;
+"&lt;td colspan = '2'>&lt;a href='http://process.opentext.com' target='_blank' style='color:blue'>Launch Process&lt;/a>&lt;/td>" + &#13;
 "&lt;/tr>" +&#13;
 "&lt;tr>" +&#13;
 "&lt;td colspan = '3' >&lt;b>&lt;font color='#f7cb09'>Vehicle information&lt;/td>&lt;td colspan = '2' >&lt;/b>&lt;font color='#f7cb09'>Trip information&lt;/font>&lt;/b>&lt;/td>" +&#13;
@@ -500,9 +501,11 @@ BirtStr.right("0" + BirtMath.mod(row["elapsedTime"],60) , 2)</expression>
 var config = {
 	/*
 	 * The Google map key. You should provide your own key to use the Google Map
-	 * JSAPI.  "AIzaSyDzX_T8DLWjYpJrzok5nmpgnNjeLPwUV2E"
+	 * JSAPI.  This key "AIzaSyDX81_IA8XWMWAOLNf5ciNvaBHbS1PGrqY" is Dan Melcher's personal one
+	 * used exclusively in the TestDrive demo environment. Security on the Google Maps Platform 
+	 * blocks it from use from any other website.
 	 */
-	googleMapKey : "",
+	googleMapKey : "AIzaSyDX81_IA8XWMWAOLNf5ciNvaBHbS1PGrqY",
 
 	/*
 	 * Provide the column binding names as shown below. If not all
@@ -530,7 +533,9 @@ var config = {
 		lat : 39.808536,
 		/* the longitude for the center */
 		lng : -101.953125
-	}
+	},
+	/* specify elapsed time for alert condition */
+	elapsedTime: "elapsedTime"
 };
 
 /* --------------------------------------------------------------------------------------- */
@@ -543,7 +548,7 @@ var config = {
 // The Google Map jsapi url. You may provide your own api key and callback
 // function name.
 var googleMapScriptUrl = "https://maps.googleapis.com/maps/api/js?key="
-		+ config.googleMapKey + "&amp;sensor=false&amp;callback=initialize";
+		+ config.googleMapKey + "&amp;callback=initialize";
 
 // get the container id
 var id = this.getId();
@@ -584,7 +589,7 @@ function getMarkerData() {
 		}
 
 		// gets the index for columns
-		var i1 = -1, i2 = -1, i3 = -1, i4 = -1, i5 = -1;
+		var i1 = -1, i2 = -1, i3 = -1, i4 = -1, i5 = -1, i6 = -1;
 		for (var i = 0; i < data.columns.length; i++) {
 			if (data.columns[i] == config.latitudeColumn) {
 				i1 = i;
@@ -596,10 +601,12 @@ function getMarkerData() {
 				i4 = i;
 			} else if (data.columns[i] == config.customerName) {
 				i5 = i;
+			} else if (data.columns[i] == config.elapsedTime) {
+			    i6 = i;
 			}
 		}
 
-		if (i1 < 0 || i2 < 0 || i3 < 0 || i4 < 0 || i5 < 0) {
+		if (i1 < 0 || i2 < 0 || i3 < 0 || i4 < 0 || i5 < 0 || i6 < 0) {
 			return [];
 		}
 
@@ -607,7 +614,7 @@ function getMarkerData() {
 		var markerData = [];
 		for (var i = 0; i < data.rows.length; i++) {
 			var row = data.rows[i];
-			markerData.push([ row[i1], row[i2], row[i3], row[i4], row[i5] ]);
+			markerData.push([ row[i1], row[i2], row[i3], row[i4], row[i5], row[i6] ]);
 		}
 
 		return markerData;
@@ -665,7 +672,10 @@ debugger;
 
 	for (var i = 0; i < data.length; i++) {
 	    var myURL;
-    	myURL = encodeURI("http://" + host + "/iportal/servlet/DownloadFile?name=/Applications/CityTaxi/images/Icons/" +  data[i][3] + ".png&amp;showBanner=false");
+	    var alertStatus = "";
+	    if (data[i][5] > 900 &amp;&amp; data[i][5] < 1000) alertStatus = "Alert2"; // Check elapsedTime for alert conditions
+	    else if (data[i][5] > 1000) alertStatus = "Alert1";
+    	myURL = encodeURI("http://" + host + "/iportal/servlet/DownloadFile?name=/Applications/CityTaxi/images/Icons/" +  data[i][3] + alertStatus + ".png&amp;showBanner=false");
 		var image = {
     		url: myURL,
     		size: new google.maps.Size(54, 54),
