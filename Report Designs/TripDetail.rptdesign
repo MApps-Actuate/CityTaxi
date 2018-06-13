@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.7.0.v201710020040</property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201610042049</property>
     <property name="units">in</property>
     <property name="theme">F-Type App.defaultTheme</property>
     <property name="iconFile">/templates/blank_report.gif</property>
@@ -1346,12 +1346,18 @@ else&#13;
 var config = {
 	/*
 	 * The Google map key. You should provide your own key to use the Google Map
+<<<<<<< HEAD
 	 * JSAPI.  Dan Melcher has a key that is used exclusively in the TestDrive demo environment. 
 	 * Security on the Google Maps Platform blocks it from use from any other website. 
 	 * If you are deploying in an environment other than TestDrive, you must obtain your
 	 * own key and add it below.
 	 */
 	googleMapKey : "Your Google Maps API key goes here",
+=======
+	 * JSAPI. Old key: AIzaSyDzX_T8DLWjYpJrzok5nmpgnNjeLPwUV2E
+	 */
+	googleMapKey : "AIzaSyDzX_T8DLWjYpJrzok5nmpgnNjeLPwUV2E",
+>>>>>>> parent of b45f413... Google Map API key added
 
 	/*
 	 * Provide the column binding names as shown below. If not all
@@ -1392,7 +1398,7 @@ var config = {
 // The Google Map jsapi url. You may provide your own api key and callback
 // function name.
 var googleMapScriptUrl = "https://maps.googleapis.com/maps/api/js?key="
-		+ config.googleMapKey + "&amp;callback=initialize";
+		+ config.googleMapKey + "&amp;sensor=false&amp;callback=initialize";
 
 // get the container id
 var id = this.getId();
@@ -1586,5 +1592,9 @@ if (window.mapApiLoaded) {
                 </row>
             </footer>
         </table>
+        <text id="433">
+            <property name="contentType">html</property>
+            <text-property name="content"><![CDATA[<script type="text/javascript">(function() {var walkme = document.createElement('script'); walkme.type = 'text/javascript'; walkme.async = true; walkme.src = 'http://cdn.walkme.com/users/c3a6e9dcce4d42798d27207362f992fa/walkme_c3a6e9dcce4d42798d27207362f992fa.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(walkme, s); window._walkmeConfig = {smartLoad:true}; })();</script>]]></text-property>
+        </text>
     </body>
 </report>

@@ -86,7 +86,8 @@ BirtStr.right("0" + BirtMath.mod(row["elapsedTime"],60) , 2)</expression>
                     <expression name="expression" type="javascript">"&lt;div align='left'>" +&#13;
 "&lt;table style='width:100%'> " +&#13;
 "&lt;tr>" +&#13;
-"&lt;td colspan = '5' >&lt;b>Customer : " + row["CustomerName"] + "&lt;/b>&lt;/td>" +&#13;
+"&lt;td colspan = '3' >&lt;b>Customer : " + row["CustomerName"] + "&lt;/b>&lt;/td>" +&#13;
+"&lt;td colspan = '2'>&lt;a href='http://web.skype.com' target='_blank'>Contact via Skype&lt;/a>&lt;/td>" + &#13;
 "&lt;/tr>" +&#13;
 "&lt;tr>" +&#13;
 "&lt;td colspan = '3' >&lt;b>&lt;font color='#f7cb09'>Vehicle information&lt;/td>&lt;td colspan = '2' >&lt;/b>&lt;font color='#f7cb09'>Trip information&lt;/font>&lt;/b>&lt;/td>" +&#13;
@@ -489,15 +490,6 @@ BirtStr.right("0" + BirtMath.mod(row["elapsedTime"],60) , 2)</expression>
         </simple-master-page>
     </page-setup>
     <body>
-        <label id="580">
-            <list-property name="visibility">
-                <structure>
-                    <property name="format">all</property>
-                    <expression name="valueExpr" type="javascript">true</expression>
-                </structure>
-            </list-property>
-            <text-property name="text">IMPORTANT NOTE: This design uses a Google Map API key. If this will be deployed in the TestDrive environment, see Dan Melcher for a key that only works in TestDrive. If not, you must register for a key yourself and insert it in the script code below. </text-property>
-        </label>
         <extended-item extensionName="HTMLControl" id="471">
             <method name="clientOnCreate"><![CDATA[// This example demonstrates how create the map and markers using Google Map JSAPI
 
@@ -509,18 +501,9 @@ BirtStr.right("0" + BirtMath.mod(row["elapsedTime"],60) , 2)</expression>
 var config = {
 	/*
 	 * The Google map key. You should provide your own key to use the Google Map
-<<<<<<< HEAD
-	 * JSAPI.  Dan Melcher has a key that is used exclusively in the TestDrive demo environment. 
-	 * Security on the Google Maps Platform blocks it from use from any other website. 
-	 * If you are deploying in an environment other than TestDrive, you must obtain your
-	 * own key and add it below.
-	 */
-	googleMapKey : "Your Google Maps API key goes here",
-=======
 	 * JSAPI.  "AIzaSyDzX_T8DLWjYpJrzok5nmpgnNjeLPwUV2E"
 	 */
 	googleMapKey : "",
->>>>>>> parent of b45f413... Google Map API key added
 
 	/*
 	 * Provide the column binding names as shown below. If not all
@@ -548,7 +531,9 @@ var config = {
 		lat : 39.808536,
 		/* the longitude for the center */
 		lng : -101.953125
-	}
+	},
+	/* specify elapsed time for alert condition */
+	elapsedTime: "elapsedTime"
 };
 
 /* --------------------------------------------------------------------------------------- */
@@ -602,7 +587,7 @@ function getMarkerData() {
 		}
 
 		// gets the index for columns
-		var i1 = -1, i2 = -1, i3 = -1, i4 = -1, i5 = -1;
+		var i1 = -1, i2 = -1, i3 = -1, i4 = -1, i5 = -1, i6 = -1;
 		for (var i = 0; i < data.columns.length; i++) {
 			if (data.columns[i] == config.latitudeColumn) {
 				i1 = i;
@@ -614,10 +599,12 @@ function getMarkerData() {
 				i4 = i;
 			} else if (data.columns[i] == config.customerName) {
 				i5 = i;
+			} else if (data.columns[i] == config.elapsedTime) {
+			    i6 = i;
 			}
 		}
 
-		if (i1 < 0 || i2 < 0 || i3 < 0 || i4 < 0 || i5 < 0) {
+		if (i1 < 0 || i2 < 0 || i3 < 0 || i4 < 0 || i5 < 0 || i6 < 0) {
 			return [];
 		}
 
@@ -625,7 +612,7 @@ function getMarkerData() {
 		var markerData = [];
 		for (var i = 0; i < data.rows.length; i++) {
 			var row = data.rows[i];
-			markerData.push([ row[i1], row[i2], row[i3], row[i4], row[i5] ]);
+			markerData.push([ row[i1], row[i2], row[i3], row[i4], row[i5], row[i6] ]);
 		}
 
 		return markerData;
@@ -683,7 +670,10 @@ debugger;
 
 	for (var i = 0; i < data.length; i++) {
 	    var myURL;
-    	myURL = encodeURI("http://" + host + "/iportal/servlet/DownloadFile?name=/Applications/CityTaxi/images/Icons/" +  data[i][3] + ".png&amp;showBanner=false");
+	    var alertStatus = "";
+	    if (data[i][5] > 900 &amp;&amp; data[i][5] < 1000) alertStatus = "Alert2"; // Check elapsedTime for alert conditions
+	    else if (data[i][5] > 1000) alertStatus = "Alert1";
+    	myURL = encodeURI("http://" + host + "/iportal/servlet/DownloadFile?name=/Applications/CityTaxi/images/Icons/" +  data[i][3] + alertStatus + ".png&amp;showBanner=false");
 		var image = {
     		url: myURL,
     		size: new google.maps.Size(54, 54),
