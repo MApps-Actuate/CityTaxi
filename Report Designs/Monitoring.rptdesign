@@ -490,6 +490,15 @@ BirtStr.right("0" + BirtMath.mod(row["elapsedTime"],60) , 2)</expression>
         </simple-master-page>
     </page-setup>
     <body>
+        <label id="580">
+            <list-property name="visibility">
+                <structure>
+                    <property name="format">all</property>
+                    <expression name="valueExpr" type="javascript">true</expression>
+                </structure>
+            </list-property>
+            <text-property name="text">IMPORTANT NOTE: This design uses a Google Map API key. If this will be deployed in the TestDrive environment, see Dan Melcher for a key that only works in TestDrive. If not, you must register for a key yourself and insert it in the script code below. </text-property>
+        </label>
         <extended-item extensionName="HTMLControl" id="471">
             <method name="clientOnCreate"><![CDATA[// This example demonstrates how create the map and markers using Google Map JSAPI
 
@@ -501,11 +510,12 @@ BirtStr.right("0" + BirtMath.mod(row["elapsedTime"],60) , 2)</expression>
 var config = {
 	/*
 	 * The Google map key. You should provide your own key to use the Google Map
-	 * JSAPI.  This key "AIzaSyDX81_IA8XWMWAOLNf5ciNvaBHbS1PGrqY" is Dan Melcher's personal one
-	 * used exclusively in the TestDrive demo environment. Security on the Google Maps Platform 
-	 * blocks it from use from any other website.
+	 * JSAPI.  Dan Melcher has a key that is used exclusively in the TestDrive demo environment. 
+	 * Security on the Google Maps Platform blocks it from use from any other website. 
+	 * If you are deploying in an environment other than TestDrive, you must obtain your
+	 * own key and add it below.
 	 */
-	googleMapKey : "AIzaSyDX81_IA8XWMWAOLNf5ciNvaBHbS1PGrqY",
+	googleMapKey : "Your Google Maps API key goes here",
 
 	/*
 	 * Provide the column binding names as shown below. If not all
